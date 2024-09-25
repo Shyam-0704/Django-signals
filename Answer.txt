@@ -1,0 +1,31 @@
+Question A:
+Django signals are executed synchronously. This means 
+the signal handlers are executed immediately as the signal is sent, and 
+the sender has to wait for the handler to finish before proceeding.
+
+Question B:
+Yes, by default, Django signals are executed in the same thread as the 
+caller. Since the signal handlers are executed synchronously, they run 
+in the same thread unless you manually run them in a different one.
+
+Question C:
+Django signals run in the same database transaction as the caller. If 
+the caller transaction fails, the signal handler actions are also rolled
+back.
+
+Custom Classwss in Python:
+
+class Rectangle:
+    def __init__(self, length:int, width:int):
+        self.length = length
+        self.width = width
+
+    def __iter__(self):
+        
+        return iter([{'length': self.length}, {'width': self.width}])
+
+
+result = Rectangle(10, 5)
+
+for values in result:
+    print(values)
