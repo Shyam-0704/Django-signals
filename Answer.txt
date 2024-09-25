@@ -13,7 +13,7 @@ Django signals run in the same database transaction as the caller. If
 the caller transaction fails, the signal handler actions are also rolled
 back.
 
-Custom Classwss in Python:
+Custom Classes in Python:
 
 class Rectangle:
     def __init__(self, length:int, width:int):
